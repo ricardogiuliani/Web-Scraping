@@ -16,8 +16,8 @@ class WeatherSpider(scrapy.Spider):
 
         yield {
                 'cidade': city,
-                'temp_max': max,
-                'temp_min': min,
-                'umi_max': umi_max,
-                'umi_min': umi_min
+                'temp_max': max[:2],
+                'temp_min': min[:2],
+                'umi_max': umi_max[:2],
+                'umi_min': umi_min[:2]
             }
